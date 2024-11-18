@@ -1,0 +1,87 @@
+Alan Kay: The best way to predict the future is to invent it.
+Donald Knuth: Premature optimization is the root of all evil.
+Edsger Dijkstra: Simplicity is a prerequisite for reliability.
+Grace Hopper: The most dangerous phrase in the language is, 'We've always done it this way.'
+John Carmack: Low-level programming is good for the programmer's soul.
+Brian Kernighan: Debugging is twice as hard as writing the code in the first place.
+Linus Torvalds: Talk is cheap. Show me the code.
+Bjarne Stroustrup: There are only two kinds of programming languages: those people always complain about and those nobody uses.
+Dennis Ritchie: UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity.
+Alan Turing: A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.
+Steve Jobs: Innovation distinguishes between a leader and a follower.
+Richard Stallman: Free software is a matter of liberty, not price.
+Bill Gates: Software is a great combination between artistry and engineering.
+Tim Berners-Lee: Data is a precious thing and will last longer than the systems themselves.
+Ken Thompson: When in doubt, use brute force.
+Barbara Liskov: Software is getting slower more rapidly than hardware becomes faster.
+Larry Page: Always deliver more than expected.
+Jeff Bezos: If you double the number of experiments you do per year, you’re going to double your inventiveness.
+Paul Graham: The best ideas are fragile and often the opposite of what everyone else believes.
+Martin Fowler: Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+Ward Cunningham: The best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer.
+Niklaus Wirth: Algorithms + Data Structures = Programs.
+Guido van Rossum: Code is read much more often than it is written.
+Robert C. Martin: Truth can only be found in one place: the code.
+Alan Perlis: A language that doesn’t affect the way you think about programming is not worth knowing.
+Marvin Minsky: You don’t understand anything until you learn it more than one way.
+Vinton Cerf: The internet is a reflection of our society and that mirror is going to be reflecting what we see.
+Peter Norvig: Learn to program in 10 years.
+Fred Brooks: Adding manpower to a late software project makes it later.
+Douglas Crockford: JavaScript is an adventure.
+Tony Hoare: Inside every large program, there is a small program trying to get out.
+Alan Kay: People who are really serious about software should make their own hardware.
+Linus Torvalds: Bad programmers worry about the code. Good programmers worry about data structures and their relationships.
+Donald Knuth: Science is what we understand well enough to explain to a computer. Art is everything else.
+Ada Lovelace: That brain of mine is something more than merely mortal, as time will show.
+Edsger Dijkstra: Testing shows the presence, not the absence of bugs.
+Bjarne Stroustrup: C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows your whole leg off.
+Dennis Ritchie: C is quirky, flawed, and an enormous success.
+Alan Turing: We can only see a short distance ahead, but we can see plenty there that needs to be done.
+Steve Jobs: Simple can be harder than complex.
+Richard Stallman: Sharing is good, and with digital technology, sharing is easy.
+Tim Berners-Lee: We need diversity of thought in the world to face the new challenges.
+Ken Thompson: One of my most productive days was throwing away 1,000 lines of code.
+Barbara Liskov: Modularity is the key to managing complexity.
+Larry Page: You don’t need to have a 100-person company to develop that idea.
+Jeff Bezos: We innovate by starting with the customer and working backward.
+Paul Graham: You make what you measure.
+Martin Fowler: Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure.
+Ward Cunningham: Clean code is what happens when you care.
+Niklaus Wirth: Program development by stepwise refinement.
+Guido van Rossum: I don't believe in a lot of ceremony; I’m a Python guy.
+Robert C. Martin: The only way to go fast is to go well.
+Alan Perlis: A programming language is low level when its programs require attention to the irrelevant.
+Marvin Minsky: You can’t teach people to design anything until they have some sense of the material.
+Vinton Cerf: Engineers work under constrained conditions.
+Peter Norvig: There is no royal road to anything.
+Fred Brooks: Plan to throw one away; you will, anyhow.
+Douglas Crockford: Good design is not about making grand plans but about solving little problems well.
+Tony Hoare: I call it my billion-dollar mistake: the invention of the null reference.
+Alan Kay: A change of perspective is worth 80 IQ points.
+Linus Torvalds: Intelligence is the ability to avoid doing work, yet getting the work done.
+Donald Knuth: Beware of bugs in the above code; I have only proved it correct, not tried it.
+Ada Lovelace: The analytical engine weaves algebraic patterns, just as the Jacquard loom weaves flowers and leaves.
+Edsger Dijkstra: The tools we use have a profound (and devious!) influence on our thinking habits.
+Bjarne Stroustrup: Proof by analogy is fraud.
+Dennis Ritchie: The only way to learn a new programming language is by writing programs in it.
+Alan Turing: I propose to consider the question, 'Can machines think?'
+Steve Jobs: Stay hungry, stay foolish.
+Richard Stallman: Nonfree software is a yoke to which our community should not submit.
+Tim Berners-Lee: The Web is more a social creation than a technical one.
+Ken Thompson: Systems programmers are the high priests of a low cult.
+Barbara Liskov: Object-oriented design is the roman numeral system of computer programming.
+Larry Page: You never lose a dream; it just incubates as a hobby.
+Jeff Bezos: The common question that gets asked in business is, 'Why?' That’s a good question, but an equally valid question is, 'Why not?'
+Paul Graham: Great programmers don't just program well. They think well.
+Martin Fowler: If you don’t have time to do it right, when will you have time to do it over?
+Ward Cunningham: It's not about the tools. It's about how you use them.
+Niklaus Wirth: Software gets slower faster than hardware gets faster.
+Guido van Rossum: Python has grown up, and I don't want it to grow big beyond its useful essence.
+Robert C. Martin: You are not your code.
+Alan Perlis: In software systems, the biggest problems arise when people work together.
+Marvin Minsky: What robots really need is a sense of humor.
+Vinton Cerf: Be careful what you design for; you might get it.
+Peter Norvig: Any problem can be solved with another level of indirection, but that usually will create another problem.
+Fred Brooks: There is no silver bullet.
+Douglas Crockford: The web is the ultimate cyberpunk fantasy.
+Tony Hoare: The best designs arise from restrictions.
