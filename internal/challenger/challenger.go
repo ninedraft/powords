@@ -42,13 +42,8 @@ func (challenger *Challenger) Handle(ctx context.Context, conn Conn) error {
 		Difficulty: challenger.Difficulty,
 	}).Encode()
 
-	packet := &transport.Packet{
-		Size: uint16(len(data)),
-		Kind: transport.PacketChallenge,
-		Data: data,
-	}
-
-	if err := conn.Send(ctx, packet); err != nil {
+	err := conn.Send(ctx, transport.NewPacket(transport.PacketChallenge, data))
+	if err != nil {
 		return fmt.Errorf("sending challenge: %w", err)
 	}
 
