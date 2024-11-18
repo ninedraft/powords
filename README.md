@@ -15,6 +15,9 @@ go run cmd/server/main.go
 go run cmd/client/main.go
 ```
 
+On default configuration it will run server on localhost:2939 and client will connect to it. After solving PoW challenge, client will receive a random quote from the server.
+
+## Structure
 
 The project is written in Go and organized into several key components:
 
@@ -154,7 +157,7 @@ export POW_TIME=2
 export POW_MEM=1024
 export POW_KEY_LEN=32
 export POW_DIFFICULTY=5
-export POW_THREADS=4
+export POW_THREADS=**4**
 ```
 
 #### Configuration Validation
