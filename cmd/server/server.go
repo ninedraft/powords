@@ -6,7 +6,9 @@ import (
 	"errors"
 	"fmt"
 	"log/slog"
+	"net/http"
 	"os"
+	"os/signal"
 	"runtime"
 	"strconv"
 	"unsafe"
@@ -15,18 +17,20 @@ import (
 	"github.com/ninedraft/powords/internal/quotes"
 	"github.com/ninedraft/powords/internal/server"
 	"github.com/ninedraft/powords/internal/transport"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
 	cfg := config{
-		Addr:       cmp.Or(os.Getenv("ADDR"), "localhost:2939"),
-		MaxConns:   cmp.Or(int(envUint[uint32]("MAX_CONNS", 1)), runtime.NumCPU()),
-		Time:       envUint[uint32]("POW_TIME", 1),
-		Memory:     envUint[uint32]("POW_MEM", 1),
-		KeyLen:     envUint[uint32]("POW_KEY_LEN", 1),
-		Difficulty: envUint[uint32]("POW_DIFFICULTY", 1),
-		Threads:    envUint[uint8]("POW_THREADS", 1),
+		Addr:        cmp.Or(os.Getenv("ADDR"), "localhost:2939"),
+		MetricsAddr: cmp.Or(os.Getenv("METRICS_ADDR"), "localhost:9090"),
+		MaxConns:    cmp.Or(int(envUint[uint32]("MAX_CONNS", 1)), runtime.NumCPU()),
+		Time:        envUint[uint32]("POW_TIME", 1),
+		Memory:      envUint[uint32]("POW_MEM", 1),
+		KeyLen:      envUint[uint32]("POW_KEY_LEN", 1),
+		Difficulty:  envUint[uint32]("POW_DIFFICULTY", 1),
+		Threads:     envUint[uint8]("POW_THREADS", 1),
 	}
 
 	slog.Info("config",
@@ -41,12 +45,22 @@ func main() {
 		Quotes:     quotes.Quotes{},
 	}
 
-	srv := server.New(cfg.Addr, runtime.NumCPU(),
-		func(ctx context.Context, conn *transport.Conn) error {
+	srv := server.Server{
+		Addr:  cfg.Addr,
+		Limit: runtime.NumCPU(),
+		Handler: func(ctx context.Context, conn *transport.Conn) error {
 			return ch.Handle(ctx, conn)
-		})
+		},
+	}
 
 	ctx := context.Background()
+	ctx, cancel := signal.NotifyContext(ctx, os.Interrupt, os.Kill)
+	defer cancel()
+
+	go func() {
+		http.Handle("/metrics", promhttp.Handler())
+		http.ListenAndServe(cfg.MetricsAddr, nil)
+	}()
 
 	if err := srv.Run(ctx); err != nil {
 		panic("serving: " + err.Error())
@@ -54,7 +68,9 @@ func main() {
 }
 
 type config struct {
-	Addr     string
+	Addr        string
+	MetricsAddr string
+
 	MaxConns int
 
 	Time       uint32
